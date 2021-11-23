@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
+    android:background="@drawable/alone"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,49 +14,68 @@
         android:layout_height="200dp"
         android:gravity="center"
         android:text="SIGN UP"
+        android:textColor="@color/black"
         android:textSize="60dp" />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/textViewSignup"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_user"
+        android:drawableLeft="@drawable/ic_user"
+        android:drawablePadding="12dp"
         android:hint="Username"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/textViewSignup"/>
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/username"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="12dp"
         android:hint="Password"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/username"/>
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp" />
 
     <EditText
         android:id="@+id/repassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Retype Password"
-        android:layout_marginTop="50dp"
-        android:layout_below="@+id/password"/>
-
-    <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Register account"
+        android:layout_height="50dp"
+        android:layout_below="@+id/password"
         android:layout_marginTop="20dp"
-        android:layout_below="@id/repassword"/>
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+        android:hint="Retype Password"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp" />
 
     <TextView
         android:id="@+id/btnSigIn"
-        android:layout_width="match_parent"
+        android:layout_width="134dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnSignUp"
-        android:text="Sign in here"
+        android:layout_below="@id/repassword"
+        android:layout_marginTop="20dp"
         android:gravity="center"
-        android:textSize="20dp"
-        android:layout_marginTop="10dp"/>
+        android:text="Sign in here"
+        android:textSize="15dp" />
 
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSigIn"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="100dp"
+        android:text="Register" />
 
 </RelativeLayout>
