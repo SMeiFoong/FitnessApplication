@@ -12,6 +12,7 @@
         android:id="@+id/textViewSignup"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:fontFamily="@font/julius_sans_one"
         android:gravity="center"
         android:text="SIGN UP"
         android:textColor="@color/black"

@@ -14,6 +14,7 @@
         android:layout_height="200dp"
         android:gravity="center"
         android:text="Reset Password"
+        android:fontFamily="@font/julius_sans_one"
         android:textColor="@color/black"
         android:textSize="35dp" />
 
