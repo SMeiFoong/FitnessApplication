@@ -6,8 +6,11 @@
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/custom_input.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_lock.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_user.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_main.xml" value="0.25485436893203883" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_password.xml" value="0.25" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_reset.xml" value="0.25" />
       </map>
     </option>
   </component>

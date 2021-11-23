@@ -69,6 +69,17 @@
         android:text="Sign in here"
         android:textSize="15dp" />
 
+    <TextView
+        android:id="@+id/btnForgot"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repassword"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="Forgot password?"
+        android:textSize="15dp" />
+
     <Button
         android:id="@+id/btnSignUp"
         android:layout_width="110dp"

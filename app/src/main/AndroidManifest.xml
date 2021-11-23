@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApplication">
         <activity
+            android:name=".ResetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

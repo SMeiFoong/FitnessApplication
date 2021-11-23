@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     EditText username, password, repassword;
     Button signUp;
     DBHelper DB;
+    TextView forgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.username);
         password = (EditText) findViewById(R.id.password);
         repassword = (EditText) findViewById(R.id.repassword);
-
         signUp = (Button) findViewById(R.id.btnSignUp);
+        forgot = (TextView) findViewById(R.id.btnForgot);
 
         TextView signIn = findViewById(R.id.btnSigIn);
 
@@ -52,9 +53,19 @@ public class MainActivity extends AppCompatActivity {
                             Boolean insert = DB.insertData(user, pass);
                             if(insert == true){
                                 Toast.makeText(MainActivity.this, "Register successful", Toast.LENGTH_LONG).show();
+                                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                                startActivity(intent);
                             }
-
+                            else {
+                                Toast.makeText(MainActivity.this, "Register failed", Toast.LENGTH_LONG).show();
+                            }
                         }
+                        else {
+                            Toast.makeText(MainActivity.this, "User already exists, please sign in!", Toast.LENGTH_LONG).show();
+                        }
+                    }
+                    else {
+                        Toast.makeText(MainActivity.this, "Password not matching", Toast.LENGTH_LONG).show();
                     }
                 }
 
@@ -67,6 +78,16 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Sign In", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            Intent intent = new Intent(getApplicationContext(), PasswordActivity.class);
+            startActivity(intent);
+
             }
         });
 
