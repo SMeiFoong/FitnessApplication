@@ -4,19 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/alone"
     android:padding="10dp"
-    tools:context=".Login_Student.LoginActivity">
+    android:background="@drawable/alone"
+    tools:context=".Login_Admin.LoginAdminActivity">
 
     <TextView
         android:id="@+id/textViewLogin"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:fontFamily="@font/julius_sans_one"
         android:gravity="center"
         android:text="LOGIN"
-        android:fontFamily="@font/julius_sans_one"
         android:textColor="@color/black"
         android:textSize="60dp" />
+
+    <TextView
+        android:id="@+id/textViewAdmin"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewLogin"
+        android:layout_marginLeft="243dp"
+        android:layout_marginTop="-83dp"
+        android:text="ADMIN"
+        android:textSize="12dp" />
 
     <EditText
         android:id="@+id/username1"

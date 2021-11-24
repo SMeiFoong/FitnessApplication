@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/alone"
     android:padding="10dp"
-    tools:context=".ResetActivity">
+    tools:context=".Login_Student.ResetActivity">
 
     <TextView
         android:id="@+id/textReset"

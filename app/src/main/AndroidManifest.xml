@@ -9,19 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApplication">
+
         <activity
-            android:name=".ResetActivity"
+            android:name=".Login_Student.ResetActivity"
             android:exported="false" />
         <activity
-            android:name=".PasswordActivity"
+            android:name=".Login_Student.PasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".Login_Student.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Login_Student.LoginActivity"
             android:exported="false" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Login_Admin.LoginAdminActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

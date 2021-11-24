@@ -1,8 +1,10 @@
-package com.example.fitnessapplication;
+package com.example.fitnessapplication.Login_Student;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.fitnessapplication.R;
 
 public class HomeActivity extends AppCompatActivity {
 

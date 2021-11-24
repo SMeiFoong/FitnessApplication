@@ -1,4 +1,4 @@
-package com.example.fitnessapplication;
+package com.example.fitnessapplication.Login_Student;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.fitnessapplication.R;
 
 public class ResetActivity extends AppCompatActivity {
 
