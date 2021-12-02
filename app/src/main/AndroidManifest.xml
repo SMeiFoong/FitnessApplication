@@ -9,13 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FitnessApplication">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".Login_Student.SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Student.ResetActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Student.PasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login_Student.HomeActivity"
+            android:exported="false" />
+        <activity android:name=".Login_Student.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -5,9 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/alone"
-    android:padding="10dp"
+    tools:context=".Login_Student.HomeActivity">
 
-    tools:context=".MainActivity">
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Home"
+        android:textSize="35dp"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/julius_sans_one"
+        />
 
 </RelativeLayout>

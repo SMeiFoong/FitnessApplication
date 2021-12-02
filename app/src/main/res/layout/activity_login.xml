@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/alone"
+    android:padding="10dp"
+    tools:context=".Login_Student.LoginActivity">
+
+    <TextView
+        android:id="@+id/textViewLogin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:fontFamily="@font/julius_sans_one"
+        android:gravity="center"
+        android:text="Login"
+        android:textSize="60dp" />
+
+    <EditText
+        android:id="@+id/usernameLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/textViewLogin"
+        android:textSize="25dp"/>
+
+    <EditText
+        android:id="@+id/passwordLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_marginTop="50dp"
+        android:layout_below="@+id/usernameLogin"
+        android:textSize="25dp"/>
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/passwordLogin"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        android:layout_marginTop="50dp"
+        app:backgroundTint="#CBC3E3" />
+
+    <TextView
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="No account yet? Sign up here"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/btnForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSignUp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Forgot password"
+        android:textSize="15dp" />
+
+</RelativeLayout>
