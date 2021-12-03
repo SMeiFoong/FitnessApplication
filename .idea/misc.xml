@@ -4,15 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/custom_input.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_alarm_black_24dp.xml" value="0.21510416666666668" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_alarm_on_black_24dp.xml" value="0.2046875" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_lock.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_user.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_dash_board.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_edit.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_login.xml" value="0.25" />
-        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_login_admin.xml" value="0.3625" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_login_admin.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_main.xml" value="0.25485436893203883" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_password.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_reset.xml" value="0.25" />
-        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/fragment_help.xml" value="0.18854166666666666" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/fragment_tasks.xml" value="0.264" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/ic_alarm_black_24dp.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/nav_header.xml" value="0.20260416666666667" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/ringing.xml" value="0.19895833333333332" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/menu/nav_menu.xml" value="0.18854166666666666" />
       </map>
     </option>
   </component>

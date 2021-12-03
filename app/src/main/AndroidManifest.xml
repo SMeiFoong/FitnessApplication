@@ -19,10 +19,10 @@
         <activity
             android:name=".Login_Student.HomeActivity"
             android:exported="false" />
-        <activity
-            android:name=".Login_Student.LoginActivity"
-            android:exported="false" />
-        <activity android:name=".Login_Admin.LoginAdminActivity">
+        <activity android:name=".Login_Student.SignUpActivity"
+            android:exported="false"/>
+
+        <activity android:name=".Login_Student.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

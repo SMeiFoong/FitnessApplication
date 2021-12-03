@@ -14,7 +14,7 @@ import com.example.fitnessapplication.R;
 public class PasswordActivity extends AppCompatActivity {
 
     EditText username;
-    Button reset;
+    Button reset, backLogin;
     DBHelper DB;
 
     @Override
@@ -25,6 +25,7 @@ public class PasswordActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.username_reset);
         reset = (Button) findViewById(R.id.btnReset);
         DB = new DBHelper(this);
+        backLogin = (Button) findViewById(R.id.backLogin);
 
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,16 @@ public class PasswordActivity extends AppCompatActivity {
                 {
                     Toast.makeText(PasswordActivity.this, "User does not exists", Toast.LENGTH_LONG).show();
                 }
+
+            }
+        });
+
+        backLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
 
             }
         });

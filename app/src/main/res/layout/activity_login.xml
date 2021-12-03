@@ -47,12 +47,32 @@
         android:paddingEnd="12dp" />
 
     <Button
-        android:id="@+id/btnSigIn1"
+        android:id="@+id/btnLogin"
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/password1"
         android:layout_marginLeft="250dp"
         android:layout_marginTop="150dp"
         android:text="Login" />
+
+    <TextView
+        android:id="@+id/btnSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password1"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="No account yet? Sign up here"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/btnForgot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSignUp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Forgot password"
+        android:textSize="15dp" />
 
 </RelativeLayout>

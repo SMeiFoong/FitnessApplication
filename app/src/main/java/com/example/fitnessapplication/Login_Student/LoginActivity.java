@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.fitnessapplication.R;
@@ -16,6 +17,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText username, password;
     Button btnLogin;
     DBHelper DB;
+    TextView signup, forgot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,10 @@ public class LoginActivity extends AppCompatActivity {
         username = (EditText) findViewById(R.id.username1);
         password = (EditText) findViewById(R.id.password1);
 
-        btnLogin = (Button) findViewById(R.id.btnSigIn1);
+        btnLogin = (Button) findViewById(R.id.btnLogin);
+
+        signup = (TextView) findViewById(R.id.btnSignUp);
+        forgot =  (TextView) findViewById(R.id.btnForgot);
 
         DB = new DBHelper(this);
 
@@ -49,6 +54,28 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+
+        forgot.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), PasswordActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
 
     }
 }
