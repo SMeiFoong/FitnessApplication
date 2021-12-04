@@ -16,7 +16,7 @@ public class Task implements Comparable<Task>{
     private long occurence; // next alarm date
 
     // used while populating intent
-    private String prefix = "com.torontodjango.task";
+    private String prefix = "com.example.fitnessapplication.task";
 
     public Task()
     {
