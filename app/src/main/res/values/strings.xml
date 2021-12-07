@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">FitnessApplication</string>
+    <string name="open" />
+    <string name="close" />
+
+    <string-array name="University">
+        <item>TARC</item>
+        <item>BAC</item>
+        <item>Sunway University</item>
+        <item>UITM</item>
+        <item>UM</item>
+        <item>INTI</item>
+        <item>KDU</item>
+    </string-array>
+
 </resources>

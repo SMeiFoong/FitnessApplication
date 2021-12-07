@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fitnessapplication">
+
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -8,34 +16,72 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.FitnessApplication">
-
-        <activity android:name=".SetupActivity"
-            android:exported="false">
-
-        </activity>
-        <activity android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>        <activity android:name=".RegisterActivity"
-        android:exported="false">
-
-    </activity>
-        <activity android:name=".SignUpActivity"
-            android:exported="false">
-
-        </activity>
-        <activity android:name=".SplashActivity"
-            android:exported="false">
-
-        </activity>
-        <activity android:name=".LoginActivity">
+        android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ViewFriendActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FindFriendActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Reminder.DashBoardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Reminder.EditActivity"
+            tools:ignore="Instantiatable" />
+        <activity android:name=".Reminder.Ringing" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <receiver
+            android:name=".Reminder.TaskReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="TODO"
+            android:process=":remote"
+            tools:ignore="ExportedReceiver" />
+        <receiver
+            android:name=".Reminder.BootCompletedReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
