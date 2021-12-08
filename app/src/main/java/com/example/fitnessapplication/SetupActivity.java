@@ -249,6 +249,7 @@ public class SetupActivity extends AppCompatActivity {
                                 hashMap.put("age", age);
                                 hashMap.put("university", university);
                                 hashMap.put("profileImage", uri.toString());
+                                hashMap.put("status","offline");
 
                                 mRef.child(mUser.getUid()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener() {
                                     @Override

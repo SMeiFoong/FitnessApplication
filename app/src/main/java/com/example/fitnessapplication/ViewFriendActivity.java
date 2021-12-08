@@ -3,6 +3,7 @@ package com.example.fitnessapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,15 +36,17 @@ public class ViewFriendActivity extends AppCompatActivity {
     TextView TextViewUsername, TextViewUniversity;
     Button btnPerform, btnDecline;
     String CurrentState = "nothing_happen";
+    String userID;
+    String myProfileImageUrl, myUsername, myUniversity;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_friend);
-        String userID = getIntent().getStringExtra("userKey");
+        userID = getIntent().getStringExtra("userKey");
         Toast.makeText(this, ""+userID,Toast.LENGTH_SHORT).show();
         
-        mUserRef = FirebaseDatabase.getInstance().getReference().child("users").child(userID);
+        mUserRef = FirebaseDatabase.getInstance().getReference().child("users");
         requestRef = FirebaseDatabase.getInstance().getReference().child("Requests");
         friendRef = FirebaseDatabase.getInstance().getReference().child("Friends");
         mAuth = FirebaseAuth.getInstance();
@@ -56,6 +59,8 @@ public class ViewFriendActivity extends AppCompatActivity {
         btnDecline = findViewById(R.id.btnDecline);
 
         LoadUser();
+
+        LoadMyProfile();
 
         CheckUserExistance(userID);
 
@@ -273,12 +278,21 @@ public class ViewFriendActivity extends AppCompatActivity {
                         hashMap.put("status","friend");
                         hashMap.put("username", username);
                         hashMap.put("profileImageUrl", profileImageUrl);
+                        hashMap.put("university", university);
+
+
+                        HashMap hashMap1 = new HashMap();
+                        hashMap1.put("status","friend");
+                        hashMap1.put("username", username);
+                        hashMap1.put("profileImageUrl", profileImageUrl);
+                        hashMap1.put("university", university);
+
                         friendRef.child(mUser.getUid()).child(userID).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
                             @Override
                             public void onComplete(@NonNull Task task) {
                                 if (task.isSuccessful())
                                 {
-                                    friendRef.child(userID).child(mUser.getUid()).updateChildren(hashMap).addOnCompleteListener(new OnCompleteListener() {
+                                    friendRef.child(userID).child(mUser.getUid()).updateChildren(hashMap1).addOnCompleteListener(new OnCompleteListener() {
                                         @Override
                                         public void onComplete(@NonNull Task task) {
                                             Toast.makeText(ViewFriendActivity.this, "Friend Added", Toast.LENGTH_SHORT).show();
@@ -298,14 +312,16 @@ public class ViewFriendActivity extends AppCompatActivity {
 
             if (CurrentState.equals("friend"))
             {
-                //
+                Intent intent = new Intent(ViewFriendActivity.this, ChatActivity.class);
+                intent.putExtra("OtherUserID", userID);
+                startActivity(intent);
             }
         }
     }
 
     private void LoadUser() {
 
-        mUserRef.addValueEventListener(new ValueEventListener() {
+        mUserRef.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
@@ -336,4 +352,39 @@ public class ViewFriendActivity extends AppCompatActivity {
         });
 
     }
+
+    private void LoadMyProfile() {
+
+        mUserRef.child(mUser.getUid()).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+
+                if (snapshot.exists())
+                {
+                    myProfileImageUrl = snapshot.child("profileImage").getValue().toString();
+                    myUsername = snapshot.child("username").getValue().toString();
+                    myUniversity = snapshot.child("university").getValue().toString();
+
+                    Picasso.get().load(profileImageUrl).into(profileImage);
+                    TextViewUsername.setText(username);
+                    TextViewUniversity.setText(university);
+
+                }
+                else
+                {
+                    Toast.makeText(ViewFriendActivity.this, "Data Not Found", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+                Toast.makeText(ViewFriendActivity.this, ""+error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+    }
+
 }

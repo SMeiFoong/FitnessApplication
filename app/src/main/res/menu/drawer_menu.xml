@@ -9,8 +9,12 @@
         android:title="Tutorial"/>
     <item android:id="@+id/reminder"
         android:title="Reminder"/>
-    <item android:id="@+id/community"
-        android:title="Community"/>
+    <item android:id="@+id/friend"
+        android:title="Friend"/>
+    <item android:id="@+id/addFriend"
+        android:title="Add Friend"/>
+    <item android:id="@+id/chat"
+        android:title="Chat"/>
     <item android:id="@+id/market"
         android:title="Market"/>
 </group>

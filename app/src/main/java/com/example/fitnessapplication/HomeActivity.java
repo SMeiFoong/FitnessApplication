@@ -43,6 +43,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -119,6 +120,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         postImageRef = FirebaseStorage.getInstance().getReference().child("PostImages");
         likeRef = FirebaseDatabase.getInstance().getReference().child("Likes");
         CommentRef = FirebaseDatabase.getInstance().getReference().child("Comments");
+        FirebaseMessaging.getInstance().subscribeToTopic(mUser.getUid());
 
         navigationView.setNavigationItemSelectedListener(this);
         sendImagePost.setOnClickListener(v -> AddPost());
@@ -200,6 +202,15 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 });
 
                 LoadComment(postKey);
+
+                holder.postImage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(HomeActivity.this, ImageViewActivity.class);
+                        intent.putExtra("url", model.getPostImageUrl());
+                        startActivity(intent);
+                    }
+                });
 
             }
 
@@ -416,9 +427,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(HomeActivity.this, DashBoardActivity.class));
                 Toast.makeText(this, "Reminder", Toast.LENGTH_SHORT).show();
                 break;
-            case R.id.community:
+            case R.id.friend:
+                startActivity(new Intent(HomeActivity.this, FriendActivity.class));
+                Toast.makeText(this, "Friend", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.addFriend:
                 startActivity(new Intent(HomeActivity.this, FindFriendActivity.class));
-                Toast.makeText(this, "Community", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Add Friend", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.chat:
+                startActivity(new Intent(HomeActivity.this, ChatUsersActivity.class));
+                Toast.makeText(this, "Add Friend", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.market:
                 Toast.makeText(this, "Market", Toast.LENGTH_SHORT).show();
