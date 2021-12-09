@@ -5,10 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
 
@@ -16,13 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.fitnessapplication.Reminder.DashBoardActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -150,7 +145,7 @@ public class SetupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(SetupActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SetupActivity.this, TutorialActivity.class);
                 startActivity(intent);
             }
         });
@@ -254,7 +249,7 @@ public class SetupActivity extends AppCompatActivity {
                                 mRef.child(mUser.getUid()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener() {
                                     @Override
                                     public void onSuccess(Object o) {
-                                        Intent intent = new Intent(SetupActivity.this, HomeActivity.class);
+                                        Intent intent = new Intent(SetupActivity.this, TutorialActivity.class);
                                         startActivity(intent);
                                         mloadingBar.dismiss();
                                         Toast.makeText(SetupActivity.this, "Setup Profile completed", Toast.LENGTH_SHORT).show();

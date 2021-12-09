@@ -12,6 +12,7 @@
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_account.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_add_post_image.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_alarm_black_24dp.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_baseline_group_add_24.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_download.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_forgot_password.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_home.xml" value="0.26614583333333336" />
@@ -23,22 +24,30 @@
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/ic_search.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/input_add_post_bg.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/input_comment_bg.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/input_design.xml" value="0.103125" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/input_password_reset.xml" value="0.26614583333333336" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/drawable/second_user_text_bg.xml" value="0.26614583333333336" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_add_item.xml" value="0.25" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_admin_add_new_product.xml" value="0.25" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_admin_category.xml" value="0.25" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_cart.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_chat.xml" value="0.24864130434782608" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_chat_users.xml" value="0.24864130434782608" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_community.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_dash_board.xml" value="0.129981884057971" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_edit.xml" value="0.2" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_find_friend.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_forgot_password.xml" value="0.264" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_friend.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_homepage.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_image_view.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_login2.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_profile_acitivity.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_search_products.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_setup.xml" value="0.264" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/activity_sign_up1.xml" value="0.25" />
@@ -52,8 +61,10 @@
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/first_user_text_bg.xml" value="0.24864130434782608" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/fragment_help.xml" value="0.2" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/fragment_tasks.xml" value="0.264" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/header.xml" value="0.19021739130434784" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/main_appbar.xml" value="0.23867753623188406" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/nav_header.xml" value="0.129981884057971" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/product_items_layout.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/record.xml" value="0.24864130434782608" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/register_recovery.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/ringing.xml" value="0.24864130434782608" />
@@ -64,7 +75,8 @@
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/single_view_post.xml" value="0.264" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/layout/single_view_video_post.xml" value="0.25" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/menu/drawer_menu.xml" value="0.25" />
-        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/menu/nav_menu.xml" value="0.24615384615384617" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/menu/nav_menu.xml" value="0.4" />
         <entry key="..\:/Users/user/StudioProjects/FitnessApplication/app/src/main/res/menu/search_menu.xml" value="0.25" />
       </map>
     </option>

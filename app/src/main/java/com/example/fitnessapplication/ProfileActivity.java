@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,9 +31,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -244,7 +241,7 @@ public class ProfileActivity extends AppCompatActivity {
                                 mRef.child(mUser.getUid()).updateChildren(hashMap).addOnSuccessListener(new OnSuccessListener() {
                                     @Override
                                     public void onSuccess(Object o) {
-                                        Intent intent = new Intent(ProfileActivity.this, HomeActivity.class);
+                                        Intent intent = new Intent(ProfileActivity.this, TutorialActivity.class);
                                         startActivity(intent);
                                         mloadingBar.dismiss();
                                         Toast.makeText(ProfileActivity.this, "Setup Profile completed", Toast.LENGTH_SHORT).show();

@@ -13,7 +13,6 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -28,6 +27,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.fitnessapplication.Reminder.DashBoardActivity;
+import com.example.fitnessapplication.Shopping.AdminCategoryActivity;
 import com.example.fitnessapplication.Utills.Comment;
 import com.example.fitnessapplication.Utills.Posts;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -53,11 +53,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Set;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class TutorialActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private  static final int REQUEST_CODE = 101;
     //Navigation
@@ -86,7 +85,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_tutorial);
 
         toolbar = findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -178,7 +177,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
 
-                                Toast.makeText(HomeActivity.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
+                                Toast.makeText(TutorialActivity.this, ""+error.getMessage(), Toast.LENGTH_SHORT).show();
 
                             }
                         });
@@ -192,7 +191,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         String comment = holder.inputComments.getText().toString();
                         if (comment.isEmpty())
                         {
-                            Toast.makeText(HomeActivity.this, "Please write something", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(TutorialActivity.this, "Please write something", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
@@ -206,7 +205,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 holder.postImage.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(HomeActivity.this, ImageViewActivity.class);
+                        Intent intent = new Intent(TutorialActivity.this, ImageViewActivity.class);
                         intent.putExtra("url", model.getPostImageUrl());
                         startActivity(intent);
                     }
@@ -243,7 +242,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void LoadComment(String postKey) {
-        MyViewHolder.recyclerView.setLayoutManager(new LinearLayoutManager(HomeActivity.this));
+        MyViewHolder.recyclerView.setLayoutManager(new LinearLayoutManager(TutorialActivity.this));
         CommentOption = new FirebaseRecyclerOptions.Builder<Comment>().setQuery(CommentRef.child(postKey),Comment.class).build();
         CommentAdapter = new FirebaseRecyclerAdapter<Comment, CommentViewHolder>(CommentOption) {
             @Override
@@ -276,13 +275,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             public void onComplete(@NonNull Task task) {
                 if (task.isSuccessful())
                 {
-                    Toast.makeText(HomeActivity.this, "Comment sent", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TutorialActivity.this, "Comment sent", Toast.LENGTH_SHORT).show();
                     adapter.notifyDataSetChanged();
                     holder.inputComments.setText(null);
                 }
                 else
                 {
-                    Toast.makeText(HomeActivity.this, ""+task.getException().toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TutorialActivity.this, ""+task.getException().toString(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -341,7 +340,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                                         if (task.isSuccessful())
                                         {
                                             mLoadingBar.dismiss();
-                                            Toast.makeText(HomeActivity.this, "Post Added", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(TutorialActivity.this, "Post Added", Toast.LENGTH_SHORT).show();
                                             addImagePost.setImageResource(R.drawable.ic_add_post_image);
                                             inputPostDesc.setText("");
 
@@ -349,7 +348,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                                         else
                                         {
                                             mLoadingBar.dismiss();
-                                            Toast.makeText(HomeActivity.this,""+task.getException().toString(),Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(TutorialActivity.this,""+task.getException().toString(),Toast.LENGTH_SHORT).show();
                                         }
                                     }
                                 });
@@ -359,7 +358,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                     else
                     {
                         mLoadingBar.dismiss();
-                        Toast.makeText(HomeActivity.this, ""+ task.getException().toString(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(TutorialActivity.this, ""+ task.getException().toString(), Toast.LENGTH_SHORT).show();
                     }
                 }
             });
@@ -391,7 +390,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
 
-                    Toast.makeText(HomeActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(TutorialActivity.this, "Something went wrong", Toast.LENGTH_SHORT).show();
 
                 }
             });
@@ -400,7 +399,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     private void SendUserToLoginActivity(){
 
-        Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+        Intent intent = new Intent(TutorialActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
 
@@ -412,39 +411,40 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         switch (menuitem.getItemId())
         {
             case R.id.home:
-                startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                startActivity(new Intent(TutorialActivity.this, MainActivity.class));
                 Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.profile:
-                startActivity(new Intent(HomeActivity.this, SetupActivity.class));
+                startActivity(new Intent(TutorialActivity.this, SetupActivity.class));
                 Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.tutorial:
-                startActivity(new Intent(HomeActivity.this, HomeActivity.class));
+                startActivity(new Intent(TutorialActivity.this, TutorialActivity.class));
                 Toast.makeText(this, "Tutorial", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.reminder:
-                startActivity(new Intent(HomeActivity.this, DashBoardActivity.class));
+                startActivity(new Intent(TutorialActivity.this, DashBoardActivity.class));
                 Toast.makeText(this, "Reminder", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.friend:
-                startActivity(new Intent(HomeActivity.this, FriendActivity.class));
+                startActivity(new Intent(TutorialActivity.this, FriendActivity.class));
                 Toast.makeText(this, "Friend", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.addFriend:
-                startActivity(new Intent(HomeActivity.this, FindFriendActivity.class));
+                startActivity(new Intent(TutorialActivity.this, FindFriendActivity.class));
                 Toast.makeText(this, "Add Friend", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.chat:
-                startActivity(new Intent(HomeActivity.this, ChatUsersActivity.class));
+                startActivity(new Intent(TutorialActivity.this, ChatUsersActivity.class));
                 Toast.makeText(this, "Add Friend", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.market:
+                startActivity(new Intent(TutorialActivity.this, AdminCategoryActivity.class));
                 Toast.makeText(this, "Market", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.logout:
                 mAuth.signOut();
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                Intent intent = new Intent(TutorialActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
                 Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
